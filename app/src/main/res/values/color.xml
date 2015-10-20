@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_primary_color">#00796b</color>
+    <color name="primary_color">#009688</color>
+    <color name="light_primary_color">#b2dfdb</color>
+    <color name="text_icons">#ffffff</color>
+    <color name="accsent_color">#009688</color>
+    <color name="primary_text">#000000</color>
+    <color name="secondary_text">#727272</color>
+    <color name="dmder_color">#b6b6b6</color>
+</resources>
