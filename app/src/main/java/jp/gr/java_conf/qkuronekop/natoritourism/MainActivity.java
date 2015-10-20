@@ -17,12 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        CsvExportTask task = new CsvExportTask(getApplication());
-        List<NatoriData> natoriDataList = task.getNatoriDataList();
-        for (NatoriData data: natoriDataList) {
-            Log.i("データ", data.getCode() + " " + data.getDistrict());
-        }
     }
 
     @Override

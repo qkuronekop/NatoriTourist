@@ -150,7 +150,7 @@ public class NatoriData {
     private String photo2;
 
     /** 写真3：ファイル名 */
-    private String Photo3;
+    private String photo3;
 
     /** 写真4：ファイル名 */
     private String photo4;
@@ -549,11 +549,11 @@ public class NatoriData {
     }
 
     public String getPhoto3() {
-        return Photo3;
+        return photo3;
     }
 
     public void setPhoto3(String photo3) {
-        Photo3 = photo3;
+        photo3 = photo3;
     }
 
     public String getPhoto4() {
