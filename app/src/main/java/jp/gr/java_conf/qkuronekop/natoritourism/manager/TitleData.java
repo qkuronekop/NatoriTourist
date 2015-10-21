@@ -1,11 +1,16 @@
 package jp.gr.java_conf.qkuronekop.natoritourism.manager;
 
 import android.content.Context;
+
+import com.activeandroid.query.Select;
+
+import java.util.List;
+
 import jp.gr.java_conf.qkuronekop.natoritourism.R;
 import jp.gr.java_conf.qkuronekop.natoritourism.table.Scenario;
 
 /**
- * タイトル(シナリオ)一覧画面のデータを作成する
+ * タイトル(シナリオ)一覧画面のデータを処理する
  * Created by tanakasatomi on 2015/10/21.
  */
 public class TitleData {
@@ -16,14 +21,25 @@ public class TitleData {
     this.contxet = context;
   }
 
+  /**
+   * 初期データとしてシナリオタイトルを保存する
+   */
   public void saveTitleData() {
     String[] titleList = contxet.getResources().getStringArray(R.array.title_array);
     for (int i = 0; i < titleList.length; i++) {
       Scenario scenario = new Scenario();
       scenario.title = titleList[i];
-      scenario.dispFlag = 0;
+      scenario.dispFlag = i == 0 ? 1 : 0;
       scenario.save();
     }
+  }
+
+  /**
+   * 表示フラグのたっているシナリオタイトルを取得する
+   * @return タイトル一覧
+   */
+  public List<Scenario> getScenarioTitle() {
+    return new Select().from(Scenario.class).where("dispFlag = 1").execute();
   }
 
 }

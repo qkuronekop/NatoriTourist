@@ -4,22 +4,29 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import butterknife.Bind;
 import butterknife.ButterKnife;
+import jp.gr.java_conf.qkuronekop.natoritourism.adapter.TitleListAdapter;
 import jp.gr.java_conf.qkuronekop.natoritourism.manager.TitleData;
 import jp.gr.java_conf.qkuronekop.natoritourism.pref.PrefarenceManager;
 
 public class ScenarioTitleListActivity extends AppCompatActivity {
+
+    @Bind(R.id.title_list_view)
+    ListView titleListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scenario_title_list);
         ButterKnife.bind(this);
-
+        TitleData titleData = new TitleData(getApplicationContext());
         if (!PrefarenceManager.getFirstFlag(getApplicationContext())) {
-            TitleData titleData = new TitleData(getApplicationContext());
             titleData.saveTitleData();
         }
+        TitleListAdapter adapter = new TitleListAdapter(getApplicationContext(), 0, titleData.getScenarioTitle());
     }
 
     @Override
