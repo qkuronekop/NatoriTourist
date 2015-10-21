@@ -4,4 +4,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_scenario_title_list">ScenarioTitleListActivity</string>
+
+    <!-- ファイル名 -->
+    <string name="access_json">access.json</string>
+    <string name="area_json">area.json</string>
+    <string name="content_json">content.json</string>
+    <string name="district_json">district.json</string>
+    <string name="information_json">information.json</string>
 </resources>

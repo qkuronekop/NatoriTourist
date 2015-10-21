@@ -2,12 +2,11 @@ package jp.gr.java_conf.qkuronekop.natoritourism;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import butterknife.ButterKnife;
-import jp.gr.java_conf.qkuronekop.natoritourism.io.JsonParseTask;
-import jp.gr.java_conf.qkuronekop.natoritourism.model.ContentObj;
+import jp.gr.java_conf.qkuronekop.natoritourism.manager.TitleData;
+import jp.gr.java_conf.qkuronekop.natoritourism.pref.PrefarenceManager;
 
 public class ScenarioTitleListActivity extends AppCompatActivity {
 
@@ -17,10 +16,9 @@ public class ScenarioTitleListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scenario_title_list);
         ButterKnife.bind(this);
 
-        JsonParseTask task = new JsonParseTask(getApplicationContext());
-        ContentObj areaData = (ContentObj) task.getData(ContentObj.class, "content.json");
-        for (ContentObj.ContentData obj: areaData.getContentData()) {
-            Log.i("Area Data", obj.getCode() + " " + obj.getText());
+        if (!PrefarenceManager.getFirstFlag(getApplicationContext())) {
+            TitleData titleData = new TitleData(getApplicationContext());
+            titleData.saveTitleData();
         }
     }
 
@@ -45,4 +43,10 @@ public class ScenarioTitleListActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    //JsonParseTask task = new JsonParseTask(getApplicationContext());
+    //DistrictObj areaData = (DistrictObj) task.getData(DistrictObj.class, "district.json");
+    //for (DistrictObj.DistrictData obj: areaData.getDistrictData()) {
+    //    Log.i("Area Data", obj.getCode() + " " + obj.getDistrict());
+    //}
 }
