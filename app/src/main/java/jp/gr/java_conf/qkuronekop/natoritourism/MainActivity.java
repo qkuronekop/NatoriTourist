@@ -1,22 +1,28 @@
 package jp.gr.java_conf.qkuronekop.natoritourism;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import java.util.List;
-
-import jp.gr.java_conf.qkuronekop.natoritourism.io.CsvExportTask;
-import jp.gr.java_conf.qkuronekop.natoritourism.model.NatoriData;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import java.util.ServiceConfigurationError;
 
 public class MainActivity extends AppCompatActivity {
+
+    @OnClick(R.id.start_button)
+    public void onStartClick() {
+        Intent intent = new Intent(this, ScenarioTitleListActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
     }
 
     @Override

@@ -1,9 +1,13 @@
 package jp.gr.java_conf.qkuronekop.natoritourism;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import butterknife.ButterKnife;
+import jp.gr.java_conf.qkuronekop.natoritourism.io.JsonParseTask;
+import jp.gr.java_conf.qkuronekop.natoritourism.model.AreaObj;
 
 public class ScenarioTitleListActivity extends AppCompatActivity {
 
@@ -11,6 +15,13 @@ public class ScenarioTitleListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scenario_title_list);
+        ButterKnife.bind(this);
+
+        JsonParseTask task = new JsonParseTask(getApplicationContext());
+        AreaObj areaData = (AreaObj) task.getData(AreaObj.class, "area.json");
+        for (AreaObj.AreaData obj: areaData.getAreaData()) {
+            Log.i("Area Data", obj.getCode() + " ");
+        }
     }
 
     @Override
