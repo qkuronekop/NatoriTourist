@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import butterknife.ButterKnife;
 import jp.gr.java_conf.qkuronekop.natoritourism.io.JsonParseTask;
-import jp.gr.java_conf.qkuronekop.natoritourism.model.AreaObj;
+import jp.gr.java_conf.qkuronekop.natoritourism.model.ContentObj;
 
 public class ScenarioTitleListActivity extends AppCompatActivity {
 
@@ -18,9 +18,9 @@ public class ScenarioTitleListActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         JsonParseTask task = new JsonParseTask(getApplicationContext());
-        AreaObj areaData = (AreaObj) task.getData(AreaObj.class, "area.json");
-        for (AreaObj.AreaData obj: areaData.getAreaData()) {
-            Log.i("Area Data", obj.getCode() + " ");
+        ContentObj areaData = (ContentObj) task.getData(ContentObj.class, "content.json");
+        for (ContentObj.ContentData obj: areaData.getContentData()) {
+            Log.i("Area Data", obj.getCode() + " " + obj.getText());
         }
     }
 
