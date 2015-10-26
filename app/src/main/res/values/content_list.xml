@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="masuda_arr">
+        <item>衣笠の松</item>
+        <item>元徳の板碑</item>
+        <item>耕龍寺</item>
+        <item>第六天神社</item>
+        <item>天神塚古墳</item>
+        <item>名取老女の碑(墓)</item>
+        <item>増田神社</item>
+        <item>旧中沢家住宅</item>
+        <item>経ノ塚古墳跡</item>
+        <item>名取十二神神社</item>
+        <item>閖上さいかい市場</item>
+    </string-array>
+    
+    <string-array name="yuriage_arr">
+        <item>多賀神社</item>
+        <item>貞山運河(貞山堀)</item>
+        <item>広浦の入江</item>
+        <item>洞口家住宅</item>
+        <item>閖上土手の松並（あんどん松）</item>
+        <item>ゆりあげ港朝市</item>
+        <item>日和山</item>
+        <item>慰霊碑</item>
+    </string-array>
+
+    <string-array name="tatekoshi_arr">
+        <item>飯野坂古墳群</item>
+        <item>雷神社</item>
+        <item>飯野坂薬師堂</item>
+        <item>館腰神社</item>
+        <item>芭蕉の句碑(道祖神路)</item>
+        <item>雷神山古墳</item>
+    </string-array>
+    
+    <string-array name="medeshima_arr">
+        <item>東街道</item>
+        <item>笠島廃寺跡</item>
+        <item>鞍掛け石</item>
+        <item>五郎市遺跡</item>
+        <item>佐倍乃神社（道祖神社）</item>
+        <item>塩薬師如来(馬頭観音)</item>
+        <item>清水峯神社</item>
+        <item>諏訪神社</item>
+        <item>滝沢不動尊</item>
+        <item>智福院</item>
+        <item>中将藤原朝臣実方の墓</item>
+        <item>野田山遺跡</item>
+    </string-array>
+
+
+    <string-array name="takadate_arr">
+        <item>幾世姫と小佐治の墓</item>
+        <item>今熊野神社</item>
+        <item>奥州三十三観音霊場(第一・第二・第三・第五番札所)</item>
+        <item>熊野神社</item>
+        <item>熊野堂横穴墓群</item>
+        <item>熊野那智神社</item>
+        <item>熊野本宮社</item>
+        <item>高舘城跡</item>
+        <item>高舘山古墳</item>
+        <item>四ッ脚門</item>
+    </string-array>
+</resources>

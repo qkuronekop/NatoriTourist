@@ -2,8 +2,8 @@
     <string name="app_name">NatoriTourism</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_scenario_title_list">ScenarioTitleListActivity</string>
+    <!-- ToolBarTitle -->
+    <string name="title_activity_scenario_title_list">物語</string>
 
     <!-- ファイル名 -->
     <string name="access_json">access.json</string>
@@ -11,4 +11,25 @@
     <string name="content_json">content.json</string>
     <string name="district_json">district.json</string>
     <string name="information_json">information.json</string>
+
+    <!-- ストーリーファイル名 -->
+    <string name="s_prologue">story_prplogue.txt</string>
+
+    <!-- メニュー -->
+    <string name="action_history">物語に出てきた場所</string>
+    <string name="action_lisence">ライセンス</string>
+    <string name="action_produser">アプリ情報</string>
+    <string name="action_story">はじめから</string>
+
+    <!-- Intent Key -->
+    <string name="key_story_no">key_story_no</string>
+
+    <!-- ストーリー画面 -->
+    <string name="story_select_place">どこへ行きますか？</string>
+    <string name="story_back_button_text">戻る</string>
+    <string name="story_fin_mark">済</string>
+
+    <!-- ダイアログ -->
+    <string name="back_alert_dialog_message">ストーリーが終了していませんが、前の画面に戻っても大丈夫ですか？</string>
+
 </resources>

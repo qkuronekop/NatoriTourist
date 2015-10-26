@@ -42,4 +42,9 @@ public class TitleData {
     return new Select().from(Scenario.class).where("dispFlag = 1").execute();
   }
 
+  public void saveDispFlag(final int no) {
+    Scenario scenario = new Select().from(Scenario.class).where("id = " + no).executeSingle();
+    scenario.dispFlag = 1;
+    scenario.save();
+  }
 }
